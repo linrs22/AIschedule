@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 71;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9B27A3D12C7E100100000001 /* SunMoonScheduleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27A3C92C7E100100000001 /* SunMoonScheduleApp.swift */; };
+		9B27A3D22C7E100100000001 /* ParsedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27A3CA2C7E100100000001 /* ParsedItem.swift */; };
+		9B27A3D32C7E100100000001 /* ParsedItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27A3CB2C7E100100000001 /* ParsedItemType.swift */; };
+		9B27A3D42C7E100100000001 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27A3CC2C7E100100000001 /* MainView.swift */; };
+		9B27A3D52C7E100100000001 /* InputPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27A3CD2C7E100100000001 /* InputPanelView.swift */; };
+		9B27A3E12C7E100100000001 /* ParsedResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27A3E82C7E100100000001 /* ParsedResultView.swift */; };
+		9B27A3E22C7E100100000001 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27A3E92C7E100100000001 /* MainViewModel.swift */; };
+		9B27A3E32C7E100100000001 /* AIParsingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27A3EA2C7E100100000001 /* AIParsingService.swift */; };
+		9B27A3E42C7E100100000001 /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27A3EB2C7E100100000001 /* CalendarService.swift */; };
+		9B27A3E52C7E100100000001 /* ReminderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27A3EC2C7E100100000001 /* ReminderService.swift */; };
+		9B27A3ED2C7E100100000001 /* OCRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27A3EE2C7E100100000001 /* OCRService.swift */; };
+		9B27A3EF2C7E100100000001 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27A3F22C7E100100000001 /* SettingsView.swift */; };
+		9B27A3F02C7E100100000001 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27A3F32C7E100100000001 /* SettingsStore.swift */; };
+		9B27A3F12C7E100100000001 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27A3F42C7E100100000001 /* KeychainHelper.swift */; };
+		E6E699AF2FDBF8C100665B88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6E699AE2FDBF8C100665B88 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9B27A3C72C7E100100000001 /* AIschedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIschedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B27A3C92C7E100100000001 /* SunMoonScheduleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunMoonScheduleApp.swift; sourceTree = "<group>"; };
+		9B27A3CA2C7E100100000001 /* ParsedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsedItem.swift; sourceTree = "<group>"; };
+		9B27A3CB2C7E100100000001 /* ParsedItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsedItemType.swift; sourceTree = "<group>"; };
+		9B27A3CC2C7E100100000001 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		9B27A3CD2C7E100100000001 /* InputPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPanelView.swift; sourceTree = "<group>"; };
+		9B27A3E82C7E100100000001 /* ParsedResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsedResultView.swift; sourceTree = "<group>"; };
+		9B27A3E92C7E100100000001 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		9B27A3EA2C7E100100000001 /* AIParsingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIParsingService.swift; sourceTree = "<group>"; };
+		9B27A3EB2C7E100100000001 /* CalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarService.swift; sourceTree = "<group>"; };
+		9B27A3EC2C7E100100000001 /* ReminderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderService.swift; sourceTree = "<group>"; };
+		9B27A3EE2C7E100100000001 /* OCRService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRService.swift; sourceTree = "<group>"; };
+		9B27A3F22C7E100100000001 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		9B27A3F32C7E100100000001 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		9B27A3F42C7E100100000001 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		E6E699AE2FDBF8C100665B88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9B27A3C42C7E100100000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9B27A3BE2C7E100100000001 = {
+			isa = PBXGroup;
+			children = (
+				9B27A3C82C7E100100000001 /* SunMoonSchedule */,
+				9B27A3C62C7E100100000001 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9B27A3C62C7E100100000001 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9B27A3C72C7E100100000001 /* AIschedule.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9B27A3C82C7E100100000001 /* SunMoonSchedule */ = {
+			isa = PBXGroup;
+			children = (
+				9B27A3C92C7E100100000001 /* SunMoonScheduleApp.swift */,
+				9B27A3CE2C7E100100000001 /* Models */,
+				9B27A3E62C7E100100000001 /* Views */,
+				9B27A3CF2C7E100100000001 /* Services */,
+				9B27A3E72C7E100100000001 /* ViewModels */,
+				E6E699AE2FDBF8C100665B88 /* Assets.xcassets */,
+			);
+			path = SunMoonSchedule;
+			sourceTree = "<group>";
+		};
+		9B27A3CE2C7E100100000001 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9B27A3CA2C7E100100000001 /* ParsedItem.swift */,
+				9B27A3CB2C7E100100000001 /* ParsedItemType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9B27A3CF2C7E100100000001 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9B27A3EA2C7E100100000001 /* AIParsingService.swift */,
+				9B27A3EB2C7E100100000001 /* CalendarService.swift */,
+				9B27A3EC2C7E100100000001 /* ReminderService.swift */,
+				9B27A3EE2C7E100100000001 /* OCRService.swift */,
+				9B27A3F32C7E100100000001 /* SettingsStore.swift */,
+				9B27A3F42C7E100100000001 /* KeychainHelper.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9B27A3E62C7E100100000001 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9B27A3CC2C7E100100000001 /* MainView.swift */,
+				9B27A3CD2C7E100100000001 /* InputPanelView.swift */,
+				9B27A3E82C7E100100000001 /* ParsedResultView.swift */,
+				9B27A3F22C7E100100000001 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9B27A3E72C7E100100000001 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9B27A3E92C7E100100000001 /* MainViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9B27A3C52C7E100100000001 /* SunMoonSchedule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B27A3DE2C7E100100000001 /* Build configuration list for PBXNativeTarget "SunMoonSchedule" */;
+			buildPhases = (
+				9B27A3C32C7E100100000001 /* Sources */,
+				9B27A3C42C7E100100000001 /* Frameworks */,
+				E6E699B02FDBF8C100665B88 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SunMoonSchedule;
+			productName = AIschedule;
+			productReference = 9B27A3C72C7E100100000001 /* AIschedule.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9B27A3BF2C7E100100000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					9B27A3C52C7E100100000001 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = 9B27A3C22C7E100100000001 /* Build configuration list for PBXProject "SunMoonSchedule" */;
+			compatibilityVersion = "Xcode 16.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9B27A3BE2C7E100100000001;
+			minimizedProjectReferenceProxies = 1;
+			productRefGroup = 9B27A3C62C7E100100000001 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9B27A3C52C7E100100000001 /* SunMoonSchedule */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E6E699B02FDBF8C100665B88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6E699AF2FDBF8C100665B88 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9B27A3C32C7E100100000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B27A3D12C7E100100000001 /* SunMoonScheduleApp.swift in Sources */,
+				9B27A3D22C7E100100000001 /* ParsedItem.swift in Sources */,
+				9B27A3D32C7E100100000001 /* ParsedItemType.swift in Sources */,
+				9B27A3D42C7E100100000001 /* MainView.swift in Sources */,
+				9B27A3D52C7E100100000001 /* InputPanelView.swift in Sources */,
+				9B27A3E12C7E100100000001 /* ParsedResultView.swift in Sources */,
+				9B27A3E22C7E100100000001 /* MainViewModel.swift in Sources */,
+				9B27A3E32C7E100100000001 /* AIParsingService.swift in Sources */,
+				9B27A3E42C7E100100000001 /* CalendarService.swift in Sources */,
+				9B27A3E52C7E100100000001 /* ReminderService.swift in Sources */,
+				9B27A3ED2C7E100100000001 /* OCRService.swift in Sources */,
+				9B27A3EF2C7E100100000001 /* SettingsView.swift in Sources */,
+				9B27A3F02C7E100100000001 /* SettingsStore.swift in Sources */,
+				9B27A3F12C7E100100000001 /* KeychainHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		9B27A3DC2C7E100100000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9B27A3DD2C7E100100000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		9B27A3DF2C7E100100000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = AIschedule;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSCalendarsFullAccessUsageDescription = "用于将识别出的日程添加到系统日历。";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "AIschedule needs calendar access to add confirmed schedules.";
+				INFOPLIST_KEY_NSRemindersFullAccessUsageDescription = "用于将识别出的待办事项添加到系统提醒事项。";
+				INFOPLIST_KEY_NSRemindersUsageDescription = "AIschedule needs reminders access to add confirmed reminders.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.local.AIschedule;
+				PRODUCT_NAME = AIschedule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		9B27A3E02C7E100100000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = AIschedule;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSCalendarsFullAccessUsageDescription = "用于将识别出的日程添加到系统日历。";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "AIschedule needs calendar access to add confirmed schedules.";
+				INFOPLIST_KEY_NSRemindersFullAccessUsageDescription = "用于将识别出的待办事项添加到系统提醒事项。";
+				INFOPLIST_KEY_NSRemindersUsageDescription = "AIschedule needs reminders access to add confirmed reminders.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.local.AIschedule;
+				PRODUCT_NAME = AIschedule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9B27A3C22C7E100100000001 /* Build configuration list for PBXProject "SunMoonSchedule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B27A3DC2C7E100100000001 /* Debug */,
+				9B27A3DD2C7E100100000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B27A3DE2C7E100100000001 /* Build configuration list for PBXNativeTarget "SunMoonSchedule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B27A3DF2C7E100100000001 /* Debug */,
+				9B27A3E02C7E100100000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9B27A3BF2C7E100100000001 /* Project object */;
+}

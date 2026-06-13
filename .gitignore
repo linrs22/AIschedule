@@ -1,0 +1,23 @@
+# Xcode
+DerivedData/
+build/
+*.xcarchive
+*.dSYM
+*.dSYM.zip
+*.app
+
+# Per-user Xcode state
+xcuserdata/
+*.xcuserstate
+
+# Release artifacts
+dist/
+
+# macOS
+.DS_Store
+
+# Local configuration and secrets
+.env
+.env.*
+*.xcconfig.local
+Secrets.xcconfig
