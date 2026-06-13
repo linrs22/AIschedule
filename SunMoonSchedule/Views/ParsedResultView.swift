@@ -7,29 +7,34 @@ struct ParsedResultView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("解析结果")
+            Text("提取的日程/代办")
                 .font(.headline)
 
             if items.isEmpty {
-                Text("解析结果会显示在这里。")
+                Text("提取的日程/代办。")
                     .foregroundStyle(.secondary)
-                    .frame(maxWidth: .infinity, minHeight: 220, alignment: .center)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                     .padding(16)
                     .background(Color(nsColor: .controlBackgroundColor))
                     .clipShape(RoundedRectangle(cornerRadius: 8))
             } else {
-                VStack(alignment: .leading, spacing: 12) {
-                    ForEach($items) { $item in
-                        ParsedItemCard(
-                            item: $item,
-                            onAddToCalendar: onAddToCalendar,
-                            onAddToReminder: onAddToReminder
-                        )
+                ScrollView {
+                    LazyVStack(alignment: .leading, spacing: 12) {
+                        ForEach($items) { $item in
+                            ParsedItemCard(
+                                item: $item,
+                                onAddToCalendar: onAddToCalendar,
+                                onAddToReminder: onAddToReminder
+                            )
+                        }
                     }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.trailing, 8)
                 }
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .scrollIndicators(.visible)
             }
         }
+        .frame(maxHeight: .infinity, alignment: .top)
     }
 }
 

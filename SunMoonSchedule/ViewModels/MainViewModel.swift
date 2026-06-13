@@ -6,7 +6,7 @@ final class MainViewModel: ObservableObject {
     @Published var inputText: String = ""
     @Published var inputImage: NSImage?
     @Published var ocrText: String = ""
-    @Published var isOCRTextVisible: Bool = true
+    @Published var isOCRTextVisible: Bool = false
     @Published var parsedItems: [ParsedItem] = []
     @Published var statusText: String = "等待输入"
     @Published var isParsing: Bool = false
@@ -20,6 +20,10 @@ final class MainViewModel: ObservableObject {
         !isParsing && (!trimmedInputText.isEmpty || inputImage != nil)
     }
 
+    var hasMixedInput: Bool {
+        !trimmedInputText.isEmpty && inputImage != nil
+    }
+
     func parseInput() async {
         guard canParse else {
             parsedItems = []
@@ -28,11 +32,15 @@ final class MainViewModel: ObservableObject {
         }
 
         isParsing = true
-        statusText = inputImage == nil ? "正在调用 DeepSeek 解析..." : "正在识别图片文字..."
+        if hasMixedInput {
+            statusText = "正在识别图片，并与输入文字一起解析..."
+        } else {
+            statusText = inputImage == nil ? "正在调用 DeepSeek 解析..." : "正在识别图片文字..."
+        }
 
         do {
             let textToParse = try await combinedTextForParsing()
-            statusText = "正在调用 DeepSeek 解析..."
+            statusText = hasMixedInput ? "正在合并文字与图片内容..." : "正在调用 DeepSeek 解析..."
             parsedItems = try await aiParsingService.parse(textToParse)
             statusText = parsedItems.isEmpty ? "未识别到日程或提醒事项" : "已解析 \(parsedItems.count) 个事项"
         } catch let error as OCRServiceError {
@@ -56,7 +64,7 @@ final class MainViewModel: ObservableObject {
         inputText = ""
         inputImage = nil
         ocrText = ""
-        isOCRTextVisible = true
+        isOCRTextVisible = false
         parsedItems = []
         statusText = "等待输入"
     }
@@ -64,7 +72,7 @@ final class MainViewModel: ObservableObject {
     func setInputImage(_ image: NSImage) {
         inputImage = image
         ocrText = ""
-        isOCRTextVisible = true
+        isOCRTextVisible = false
         statusText = "已添加图片，点击解析后将先进行 OCR"
     }
 
@@ -121,11 +129,14 @@ final class MainViewModel: ObservableObject {
         if let inputImage {
             let recognizedText = try await ocrService.recognizeText(in: inputImage)
             ocrText = recognizedText
+            isOCRTextVisible = false
 
-            parts.append("""
-            图片 OCR 文字：
-            \(recognizedText)
-            """)
+            if !recognizedText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                parts.append("""
+                图片 OCR 文字：
+                \(recognizedText)
+                """)
+            }
         }
 
         return parts.joined(separator: "\n\n")

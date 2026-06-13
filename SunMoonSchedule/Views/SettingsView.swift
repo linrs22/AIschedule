@@ -13,7 +13,7 @@ struct SettingsView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Text("设置")
+            Text("设置API")
                 .font(.title2.weight(.semibold))
 
             VStack(alignment: .leading, spacing: 8) {

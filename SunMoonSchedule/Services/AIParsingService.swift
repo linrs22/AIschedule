@@ -78,6 +78,11 @@ struct AIParsingService {
         当前日期和时间：\(currentDate)
         当前时区：\(timeZone)
 
+        用户可能同时提供“用户输入文字”和“图片 OCR 文字”。如果两种来源同时存在，请将它们视为同一次输入并结合解析：
+        - 两种来源的信息可能互相补充，例如文字提供日期，图片提供时间和地点。
+        - 合并指向同一事项的信息，不要因为内容在两个来源中重复而生成重复事项。
+        - 如果两种来源明确冲突，优先采用用户输入文字，并在 missing_fields 中标注 source_conflict。
+
         只输出 JSON，不要输出 Markdown，不要解释。
         如果事项有明确开始时间和结束时间，type 为 calendar_event。
         如果是待办、截止、提交、购买、提醒等，type 为 reminder。

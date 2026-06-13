@@ -6,46 +6,49 @@ struct MainView: View {
     @State private var isSettingsPresented = false
 
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 20) {
-                HStack {
-                    Text("AIschedule")
-                        .font(.largeTitle.weight(.semibold))
+        VStack(alignment: .leading, spacing: 20) {
+            HStack {
+                Text("智能日程助理")
+                    .font(.largeTitle.weight(.semibold))
 
-                    Spacer()
+                Spacer()
 
-                    Button {
-                        isSettingsPresented = true
-                    } label: {
-                        Label("设置", systemImage: "gearshape")
-                    }
+                Button {
+                    isSettingsPresented = true
+                } label: {
+                    Label("设置API", systemImage: "gearshape")
                 }
-
-                HStack(alignment: .top, spacing: 20) {
-                    InputPanelView(viewModel: viewModel)
-                        .frame(minWidth: 360, idealWidth: 440, maxWidth: 520)
-
-                    ParsedResultView(
-                        items: $viewModel.parsedItems,
-                        onAddToCalendar: { item in
-                            Task {
-                                await viewModel.addToCalendar(item)
-                            }
-                        },
-                        onAddToReminder: { item in
-                            Task {
-                                await viewModel.addToReminder(item)
-                            }
-                        }
-                    )
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-                }
-
-                StatusBarView(statusText: viewModel.statusText)
             }
-            .padding(24)
-            .frame(maxWidth: .infinity, alignment: .topLeading)
+
+            HStack(alignment: .top, spacing: 20) {
+                ScrollView {
+                    InputPanelView(viewModel: viewModel)
+                        .padding(.trailing, 8)
+                }
+                .scrollIndicators(.visible)
+                    .frame(minWidth: 160, idealWidth: 240, maxWidth: 320)
+                    .frame(maxHeight: .infinity, alignment: .top)
+
+                ParsedResultView(
+                    items: $viewModel.parsedItems,
+                    onAddToCalendar: { item in
+                        Task {
+                            await viewModel.addToCalendar(item)
+                        }
+                    },
+                    onAddToReminder: { item in
+                        Task {
+                            await viewModel.addToReminder(item)
+                        }
+                    }
+                )
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+            }
+            .frame(maxHeight: .infinity, alignment: .top)
+
+            StatusBarView(statusText: viewModel.statusText)
         }
+        .padding(24)
         .frame(minWidth: 820, minHeight: 520)
         .sheet(isPresented: $isSettingsPresented) {
             SettingsView(settingsStore: settingsStore)
